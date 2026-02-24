@@ -28,21 +28,29 @@
 
     <section>
         <h2>Internet e Web: conceitos essenciais</h2>
+		
+		<h3>O que é Internet?</h3>
+		<p>A Internet é uma rede mundial de computadores interligados que se comunicam por meio de protocolos padronizados.</p>
 		<ul>
-			<li>Internet: rede global de dispositivos conectados por protocolos de comunicação (TCP/IP).</li>
-			<li>Web (World Wide Web): um dos serviços da internet, baseado no protocolo HTTP/HTTPS, que entrega documentos hipertextuais (HTML, CSS, JS, imagens).</li>
-			<li>Cliente x Servidor:
-				<ul>
-					<li>Cliente: o navegador que solicita recursos.</li>
-					<li>Servidor: aplicação que responde às requisições com recursos(páginas, APIs).</li>
-				</ul>
-			</li>
-			<li>URL: identificador de recursos na web.
-				<ul>
-					<li>Estrutura básica: protocolo + domínio + caminho + parâmetros +fragmento.</li>
-				</ul>
-			</li>
+		  <li>Permite comunicação, transferência de arquivos e acesso a sistemas online.</li>
+		  <li>Baseada no conjunto de protocolos TCP/IP.</li>
+		  <li>É a infraestrutura física e lógica das redes.</li>
 		</ul>
+		<p>Internet não é a mesma coisa que Web. A Web é um serviço que funciona sobre a Internet.</p>
+		
+		
+
+		<h3>Como funciona a Web?</h3>
+		
+		<p>A Web funciona no modelo cliente-servidor.</p>
+		<ul>
+		  <li>O usuário digita um endereço (URL).</li>
+		  <li>O navegador envia uma requisição HTTP ou HTTPS.</li>
+		  <li>O servidor processa a requisição.</li>
+		  <li>O servidor responde com um documento HTML.</li>
+		  <li>O navegador interpreta e exibe a página.</li>
+		</ul>
+		
 		<h3>Ciclo de requisição e resposta</h3>
         <p>
             O navegador resolve o domínio (DNS), obtém o IP do servidor, abre conexão (TCP/TLS se HTTPS), envia requisição HTTP e recebe resposta HTTP com cabeçalhos e corpo (HTML, JSON, etc.).
@@ -51,31 +59,123 @@
             <img src="img/class-01_diagram_1.png" alt="Diagrama 1">
             <figcaption>Figura 1 – Ciclo de requisição e resposta.</figcaption>
         </figure>
-    </section>
-	
-	<section>
-        <h2>Web Standards: W3C e WHATWG</h2>
-        <p>
-            Por que padrões? Garantem interoperabilidade, acessibilidade e compatibilidade entre navegadores.
-        </p>
-		<p>Organizações:</p>
+
+		<h3>A Web é gráfica e fácil de ser navegada</h3>
+		<p>Antes da Web, a internet era majoritariamente textual. Com a criação da Web, tornou-se possível:</p>
 		<ul>
-			<li>W3C (World Wide Web Consortium): publica recomendações de tecnologias web (CSS, ARIA, etc.).</li>
-			<li>WHATWG (Web Hypertext Application Technology Working Group): mantém o HTML como “Living Standard”.</li>
+		  <li>Exibir imagens</li>
+		  <li>Criar hyperlinks (links clicáveis).</li>
+		  <li>Navegar clicando em links</li>
+		  <li>Estruturar conteúdo visualmente</li>
 		</ul>
+
+
+
+
+		<h3>A Web Distribuída</h3>
+		<p>A Web é descentralizada e distribuída em diversos servidores pelo mundo.</p>
+		<ul>
+		  <li>Não depende de um único servidor.</li>
+		  <li>Possui alta disponibilidade.</li>
+		  <li>Permite escalabilidade.</li>
+		</ul>
+
+
+		<h3>A Web é dinâmica</h3>
+		<p>Inicialmente as páginas eram estáticas. Hoje a Web permite conteúdo dinâmico.</p>
+		<ul>
+		  <li>Uso de JavaScript.</li>
+		  <li>Linguagens backend como PHP, Python e Java.</li>
+		  <li>Integração com bancos de dados.</li>
+		</ul>
+
+
+		<h3>A Web é independente de plataforma</h3>
+		<p>Pode ser acessada em diferentes sistemas operacionais.</p>
+		<ul>
+		  <li>Windows</li>
+		  <li>Linux</li>
+		  <li>macOS</li>
+		  <li>Android</li>
+		  <li>iOS</li>
+		</ul>
+		
     </section>
 	
 	<section>
         <h2>História do HTML e CSS</h2>
-        <p>
-            Desenvolvimento web é a área de tecnologia que cria e mantém sites, aplicativos e sistemas para a internet, envolvendo desde o design visual (front-end) até a lógica do servidor e banco de dados (back-end), com profissionais como desenvolvedores front-end, back-end e full stack usando linguagens como HTML, CSS, JavaScript, Python, etc., para construir experiências digitais funcionais e seguras.
-        </p>
-		<p>Organizações:</p>
+		
+		<p>O <b>HTML (HyperText Markup Language)</b> é a linguagem de marcação utilizada para estruturar conteúdos na Web. Ele foi criado em 1991 por Tim Berners-Lee, no CERN (Organização Europeia para a Pesquisa Nuclear), com o objetivo de permitir o compartilhamento de documentos científicos entre pesquisadores.</p>
+
+		<p>O HTML foi inspirado no conceito de hipertexto, que permite a criação de documentos interligados por meio de links (hyperlinks). Essa ideia revolucionou a forma como as informações eram organizadas e acessadas na internet.</p>
+
+		<p>Principais marcos na evolução do HTML:</p>
 		<ul>
-			<li>W3C (World Wide Web Consortium): publica recomendações de tecnologias web (CSS, ARIA, etc.).</li>
-			<li>WHATWG (Web Hypertext Application Technology Working Group): mantém o HTML como “Living Standard”.</li>
+		  <li>1991 – Primeira versão do HTML, simples e voltada para documentos científicos.</li>
+		  <li>1995 – HTML 2.0, primeira padronização oficial.</li>
+		  <li>1997 – HTML 4.0, com melhorias estruturais e separação mais clara entre conteúdo e apresentação.</li>
+		  <li>2000 – XHTML, versão mais rigorosa baseada em XML.</li>
+		  <li>2014 – HTML5, trazendo suporte nativo a vídeo, áudio, gráficos, semântica e APIs modernas.</li>
 		</ul>
+
+		<p>O HTML evoluiu de uma linguagem simples de marcação de textos para a base estrutural de aplicações web modernas, sendo hoje mantido como um padrão vivo (Living Standard).</p>
+		
+		<p>O <b>CSS (Cascading Style Sheets)</b> foi criado em 1996 com o objetivo de resolver um problema crescente na Web: a mistura entre conteúdo e formatação dentro do HTML. Antes do CSS, era comum utilizar tags como &lt;font&gt; para definir cores, tamanhos e estilos diretamente no código HTML, tornando os documentos difíceis de manter.</p>
+
+		<p>A proposta do CSS foi separar completamente a estrutura (HTML) da apresentação visual (design), permitindo maior organização, reutilização de estilos e padronização visual entre páginas.</p>
+
+		<p>Principais marcos na evolução do CSS:</p>
+		<ul>
+		  <li>1996 – CSS1, introduzindo controle básico de cores, fontes e espaçamentos.</li>
+		  <li>1998 – CSS2, adicionando posicionamento, z-index e suporte a diferentes mídias.</li>
+		  <li>2011 em diante – CSS3, dividido em módulos (Flexbox, Grid Layout, Media Queries, Animações).</li>
+		</ul>
+
+		<p>Com a evolução do CSS, tornou-se possível desenvolver layouts responsivos, adaptar páginas para dispositivos móveis e criar interfaces modernas sem depender de soluções baseadas exclusivamente em scripts.</p>
+
+		<p>Hoje, HTML e CSS trabalham de forma complementar: o HTML organiza e estrutura o conteúdo, enquanto o CSS define como esse conteúdo será apresentado visualmente ao usuário.</p>
+
+        
     </section>
+	
+	<section>
+        <h2>Web Standards: W3C e WHATWG</h2>
+		
+		<p>Web Standards são:</p>
+		<ul>
+		  <li>Conjuntos de regras técnicas</li>
+		  <li>Especificações oficiais</li>
+		  <li>Boas práticas de desenvolvimento</li>
+		  <li>Android</li>
+		  <li>iOS</li>
+		</ul>
+		
+		<p>Servem para garantir:</p>
+		<ul>
+		  <li>Compatibilidade entre navegadores</li>
+		  <li>Acessibilidade</li>
+		  <li>Manutenção facilitada</li>
+		  <li>Separação entre conteúdo e apresentação</li>
+		</ul>
+		
+		<h3>World Wide Web Consortium (W3C)</h3>
+		<p>Criado em 1994 por Tim Berners-Lee com o objetivo de manter a Web aberta, acessível e padronizada. Função:</p>
+		<ul>
+		  <li>Desenvolver padrões oficiais da Web</li>
+		  <li>Garantir interoperabilidade</li>
+		  <li>Definir especificações como HTML e CSS</li>
+		</ul>
+		
+		<h3>Web Hypertext Application Technology Working Group (WHATWG)</h3>
+		<p>Criado em 2004 por empresas como Apple, Mozilla e Opera. Motivação: Acelerar a evolução do HTML. Trabalha junto com o W3C no desenvolvimento do HTML Living Standard.</p>
+	
+		
+		
+		
+        
+    </section>
+	
+	
 	
 	<section>
         <h2>Desenvolvimento Web</h2>
@@ -132,9 +232,64 @@ O layout responsivo não é uma tecnologia separada; é uma abordagem ao web des
 		
 		<h3>Exercício 1</h3>
         <p>Digite e analise o código abaixo, com e sem CSS.</p>
-		
+		<pre class="line-numbers"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Exercício Aula 01&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;header&gt;
+    &lt;h1&gt;Minha Primeira Página&lt;/h1&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;section class="conteudo"&gt;
+      &lt;p&gt;Conteúdo principal da página&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section class="conteudo"&gt;
+      &lt;p&gt;Outro bloco de conteúdo&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;Rodapé&lt;/p&gt;
+  &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<pre class="line-numbers"><code class="language-css">body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f0f0f0;
+}
+
+header, footer {
+  background: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+.conteudo {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+</code></pre>
+
 		<h3>Exercício 2</h3>
-        <p>Analise os layouts disponíveis AQUI; reduza o tamanho da janela do navegador para simular dispositivos de diferentes tamanhos.</p>
+        <p>Analise os layouts disponíveis <a href="https://tinyurl.com/4vtb9rdn" target="_blank">AQUI</a>; reduza o tamanho da janela do navegador para simular dispositivos de diferentes tamanhos.</p>
 		
 		<h3>Exercício 3</h3>
         <p>Escolha um site conhecido e avalie sua responsividade. Responda: o site se adapta para diferentes dispositivos e tamanhos de tela? Há informações perdidas na visualização em dispositivos menores?</p>
