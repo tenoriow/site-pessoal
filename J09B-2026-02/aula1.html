@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1 - Introdução e Conceitos</title>
+    <link rel="stylesheet" href="../css/style.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+</head>
+<body class="aula-page">
+
+<header class="header">
+    <div class="container">
+        <h1>Aula 1 - Introdução</h1>
+        <p class="subtitle"><b>Programação Web Responsiva</b> • Prof. Me. William Tenório</p>
+
+    </div>
+</header>
+
+<main class="container content aula">
+
+    <section>
+        <h2>Internet e Web: conceitos essenciais</h2>
+		<ul>
+			<li>Internet: rede global de dispositivos conectados por protocolos de comunicação (TCP/IP).</li>
+			<li>Web (World Wide Web): um dos serviços da internet, baseado no protocolo HTTP/HTTPS, que entrega documentos hipertextuais (HTML, CSS, JS, imagens).</li>
+			<li>Cliente x Servidor:
+				<ul>
+					<li>Cliente: o navegador que solicita recursos.</li>
+					<li>Servidor: aplicação que responde às requisições com recursos(páginas, APIs).</li>
+				</ul>
+			</li>
+			<li>URL: identificador de recursos na web.
+				<ul>
+					<li>Estrutura básica: protocolo + domínio + caminho + parâmetros +fragmento.</li>
+				</ul>
+			</li>
+		</ul>
+		<h3>Ciclo de requisição e resposta</h3>
+        <p>
+            O navegador resolve o domínio (DNS), obtém o IP do servidor, abre conexão (TCP/TLS se HTTPS), envia requisição HTTP e recebe resposta HTTP com cabeçalhos e corpo (HTML, JSON, etc.).
+        </p>
+		<figure>
+            <img src="img/class-01_diagram_1.png" alt="Diagrama 1">
+            <figcaption>Figura 1 – Ciclo de requisição e resposta.</figcaption>
+        </figure>
+    </section>
+	
+	<section>
+        <h2>Web Standards: W3C e WHATWG</h2>
+        <p>
+            Por que padrões? Garantem interoperabilidade, acessibilidade e compatibilidade entre navegadores.
+        </p>
+		<p>Organizações:</p>
+		<ul>
+			<li>W3C (World Wide Web Consortium): publica recomendações de tecnologias web (CSS, ARIA, etc.).</li>
+			<li>WHATWG (Web Hypertext Application Technology Working Group): mantém o HTML como “Living Standard”.</li>
+		</ul>
+    </section>
+	
+	<section>
+        <h2>História do HTML e CSS</h2>
+        <p>
+            Desenvolvimento web é a área de tecnologia que cria e mantém sites, aplicativos e sistemas para a internet, envolvendo desde o design visual (front-end) até a lógica do servidor e banco de dados (back-end), com profissionais como desenvolvedores front-end, back-end e full stack usando linguagens como HTML, CSS, JavaScript, Python, etc., para construir experiências digitais funcionais e seguras.
+        </p>
+		<p>Organizações:</p>
+		<ul>
+			<li>W3C (World Wide Web Consortium): publica recomendações de tecnologias web (CSS, ARIA, etc.).</li>
+			<li>WHATWG (Web Hypertext Application Technology Working Group): mantém o HTML como “Living Standard”.</li>
+		</ul>
+    </section>
+	
+	<section>
+        <h2>Desenvolvimento Web</h2>
+        <p>
+            Desenvolvimento web é a área de tecnologia que cria e mantém sites, aplicativos e sistemas para a internet, envolvendo desde o design visual (front-end) até a lógica do servidor e banco de dados (back-end), com profissionais como desenvolvedores front-end, back-end e full stack usando linguagens como HTML, CSS, JavaScript, Python, etc., para construir experiências digitais funcionais e seguras.
+        </p>
+    </section>
+	
+	<section>
+        <h2>Comparativo de Layouts</h2>
+		<figure>
+            <img src="img/layouts.png" alt="Diagrama 1">
+            <figcaption>Figura 2 – Comparação de layouts - fixo vs responsivo.</figcaption>
+        </figure>
+		<p>Inicialmente, havia as opções:</p>
+		<ul>
+			<li>Layout fixo, que tem um tamanho fixo definido e não muda conforme o tamanho da tela</li>
+			<li>Layout fluído, que se estende ou encolhe para preencher a janela do navegador, mas não reorganiza o layout</li>
+		</ul>
+		<p>Problemas:</p>
+		<ul>
+			<li>Resultado bom apenas na tela da pessoa que desenvolveu.</li>
+			<li>Site com layout fixo criava uma barra de rolagem horizontal em telas menores e muito espaço em branco nas bordas em telas maiores, ignorando o dispositivo do usuário.</li>
+			<li>Site fluído com design “esmagado” para telas menores e linhas muito longas em telas maiores, podendo prejudicar a legibilidade.</li>
+		</ul>
+		<p>Com a evolução dos dispositivos móveis, empresas passaram a criar uma versão mobile do seu site, com URL diferente: layout adaptado.</p>
+		<p>Problemas:</p>
+		<ul>
+			<li>Diferentes versões a serem construídas e mantidas (desktop, tablet, smartphone, etc)</li>
+			<li>Dificuldade de manutenção e escalabilidade: qualquer mudança implicaria em alterar todas as versões, aumento risco de inconsistência</li>
+			<li>“Gap” de dispositivos: dificuldade em lidar com diferentes resoluções de tela.</li>
+		</ul>
+    </section>
+
+    <section>
+        <h2>Conceito central: Responsividade</h2>
+
+        <p>
+            Desenvolvimento web responsivo é a prática de criar sites que se adaptam automaticamente a qualquer tamanho de tela (desktop, tablet, celular), reorganizando o layout conforme o dispositivo do usuário.<br>
+O layout responsivo não é uma tecnologia separada; é uma abordagem ao web design e um conjunto de melhores práticas usado para criar um layout que possa responder ao dispositivo que está sendo usado para visualizar o conteúdo.
+
+        </p>
+		<p>Vantagens:</p>
+		<ul>
+			<li>Melhor Experiência do Usuário (UX): Facilita a leitura e navegação sem zoom ou rolagem horizontal.</li>
+			<li>Facilidade de Manutenção: Apenas uma base de código para todos os dispositivos.</li>
+			<li>Custo-Benefício: Mais eficiente do que criar sites separados (um para mobile, um para desktop).</li>
+			<li>SEO: O Google prioriza sites otimizados para dispositivos móveis.</li>
+		</ul>
+    </section>
+	
+	<section class="exercicios">
+        <h2>Exercícios</h2>
+		
+		<h3>Exercício 1</h3>
+        <p>Digite e analise o código abaixo, com e sem CSS.</p>
+		
+		<h3>Exercício 2</h3>
+        <p>Analise os layouts disponíveis AQUI; reduza o tamanho da janela do navegador para simular dispositivos de diferentes tamanhos.</p>
+		
+		<h3>Exercício 3</h3>
+        <p>Escolha um site conhecido e avalie sua responsividade. Responda: o site se adapta para diferentes dispositivos e tamanhos de tela? Há informações perdidas na visualização em dispositivos menores?</p>
+
+    </section>
+	
+	
+	 <section>
+        <h2>Estruturas Básicas do Desenvolvimento Web</h2>
+        <p>
+            Uma página web é uma combinação de estrutura + estilo + comportamento:
+        </p>
+        <ul>
+            <li>HTML → estrutura</li>
+            <li>CSS → aparência e layout</li>
+            <li>JavaScript → comportamento</li>
+        </ul>
+        <p>
+            O fundamento para o desenvolvimento responsivo está na combinação de HTML e CSS.
+        </p>
+    </section>
+
+    <section>
+        <h2>Elemento HTML</h2>
+		<pre class="line-numbers"><code class="language-html">&lt;p&gt;Conhecendo o HTML para criar sites&lt;/p&gt;
+</code></pre>
+        <p>
+            Um elemento HTML é composto por:
+        </p>
+        <ul>
+            <li>A tag de abertura: Consiste no nome do elemento (no caso, p), envolvido em parênteses
+angulares de abertura e fechamento. Isso demonstra onde o elemento começa, ou onde
+seu efeito se inicia — nesse caso, onde é o começo do parágrafo.</li>
+            <li>A tag de fechamento: Isso é a mesma coisa que a tag de abertura, exceto que inclui uma
+barra antes do nome do elemento. Isso demonstra onde o elemento acaba — nesse caso,
+onde é o fim do parágrafo. Esquecer de incluir uma tag de fechamento é um dos erros mais
+comuns de iniciantes e pode levar a resultados estranhos.</li>
+            <li>O conteúdo: Esse é o conteúdo do elemento, que nesse caso é apenas texto.</li>
+			<li>O elemento: A tag de abertura, a de fechamento, e o conteúdo formam o elemento.</li>
+        </ul>
+
+        <p>
+            A tag de abertura indica onde o elemento começa.  
+            A tag de fechamento indica onde o elemento termina.  
+            Esquecer a tag de fechamento é um erro comum de iniciantes.
+        </p>
+    </section>
+
+    <section>
+        <h2>Atributos</h2>
+        <p>
+            Elementos HTML podem conter atributos, que fornecem informações extras. Exemplos:
+        </p>
+        <ul>
+            <li>class → identifica grupos de elementos</li>
+            <li>id → identifica um elemento individualmente</li>
+        </ul>
+				<pre class="line-numbers"><code class="language-html">&lt;p class="meus-paragrafos"&gt;Conhecendo o HTML para criar sites&lt;/p&gt;
+</code></pre>
+        <p>
+            Um atributo sempre deve conter:
+        </p>
+        <ul>
+            <li>Espaço após o nome do elemento</li>
+            <li>Nome do atributo</li>
+            <li>Sinal de igual (=)</li>
+            <li>Valor entre aspas</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Aninhamento de Elementos</h2>
+        <p>
+            É possível colocar elementos dentro de outros elementos, o que é chamado de aninhamento. O
+código abaixo deixa a palavra HTML em negrito, por meio do elemento <code class="language-html">&lt;b&gt;</code>.
+        </p>
+        <p>
+            É importante fechar os elementos na ordem correta: o último que abre deve ser o primeiro a fechar. No exemplo
+acima, abrimos primeiro o elemento <code class="language-html">&lt;p&gt;</code>, depois o elemento &lt;b&gt;; portanto, temos que fechar
+primeiro o elemento &lt;b&gt;, depois o elemento &lt;p&gt;.
+        </p>
+    </section>
+
+    <section>
+        <h2>Elementos Vazios</h2>
+        <p>
+            Alguns elementos não possuem conteúdo interno e são chamados de elementos vazios.
+        </p>
+		<pre class="line-numbers"><code class="language-html">&lt;img src="imgs/minha-imagem.png" alt="Minha imagem de teste"&gt;
+</code></pre>
+        <p>
+            No exemplo é exibido o elemento <code class="language-html">&lt;img&gt;</code>. Ele contém dois atributos, mas não há tag &lt;/img&gt; de
+fechamento e não há conteúdo interno.
+
+        </p>
+    </section>
+
+    <section>
+        <h2>Estrutura Básica de um Documento HTML</h2>
+        <p>
+            O HTML (HyperText Markup Language) é fundamental porque atua como o “esqueleto” de toda
+página da web, organizando e estruturando o conteúdo — textos, imagens, vídeos e links — para
+que navegadores possam exibi-los corretamente.<br>
+Todo documento HTML possui uma estrutura mínima obrigatória:
+        </p>
+		
+				<pre class="line-numbers"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+ &lt;head&gt;
+ &lt;meta charset="UTF-8"&gt;
+ &lt;meta name="keywords" content="curso java curso C#"&gt;
+ &lt;title&gt;Minha Página&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+ &lt;!-- Aqui vai o conteúdo da página --&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+        <p><code class="language-html">&lt;!DOCTYPE html&gt;</code> Para um navegador exibir corretamente uma página web, devemos informar
+		explicitamente o tipo do documento. O tipo do documento é informado com a declaração <code class="language-html">&lt;!DOCTYPE
+		html&gt;</code>.</p>
+		<p><code class="language-html">&lt;html&gt;</code> Os elementos HTML, com exceção do DOCTYPE, devem ser inseridos no conteúdo do elemento
+		html. Esse elemento é aberto com a tag &lt;html&gt; no início do documento e fechado com a tag &lt;/html&gt;
+		no final, e deve conter exatamente um elemento head seguido de exatamente um elemento body.
+		Recomenda-se a utilização do atributo lang para indicar o idioma utilizado no documento HTML ou
+		na maior parte dele (ferramentas de leitura ou de tradução de texto).</p>
+		<p><code class="language-html">&lt;head&gt;</code> A principal função do elemento head é agrupar informações sobre o documento HTML
+		(metadados). São exemplos de metadados: o encoding, o autor, a descrição e as palavras chaves
+		do documento HTML.</p>
+		<p>O elemento meta é utilizado para definir os metadados.</p>
+		<p>O elemento head deve conter também o elemento title, que define o título do documento HTML.</p>
+		<p><code class="language-html">&lt;body&gt;</code> Todo o conteúdo de uma página web deve ser definido no corpo do elemento body. Por
+		exemplo, podemos inserir no corpo do body cabeçalhos, textos, listas, tabelas, entre outros
+		componentes.</p>
+		<p>Comentários - Podemos adicionar comentários em um documento HTML dentro das tags &lt;!-- e --
+		&gt;. Os comentários são ignorados pelos navegadores.</p>
+
+    </section>
+
+    <section>
+        <h2>Elementos Básicos</h2>
+
+        <h3>Títulos</h3>
+        <p>
+            Uma página web pode conter uma hierarquia de títulos e subtítulos para estabelecer uma
+divisão do seu conteúdo. Devemos utilizar os elementos h1, h2, h3, h4, h5 e h6. Os sufixos
+numéricos de 1 a 6 indicam o nível do título dentro da hierarquia de títulos do documento.
+        </p>
+		<pre class="line-numbers"><code class="language-html">&lt;h1&gt;Título Principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo Nível 2&lt;/h2&gt;
+&lt;h3&gt;Subtítulo Nível 2 &lt;/h3&gt;
+</code></pre>
+
+        <p>
+            Devemos utilizar os títulos com cautela, pois eles são usados como critério de ranqueamento por
+buscadores como Google. O uso correto dos elementos de título é fortemente recomendado pelos
+especialistas em SEO (Search Engine Optimization):
+        </p>
+		<ul>
+            <li>Manter a ordem lógica dos títulos. Um elemento h2 deve ser precedido de um elemento h1,
+por exemplo.</li>
+            <li>O título de uma seção deve descrever bem o conteúdo dela.</li>
+        </ul>
+
+        <h3>Parágrafos</h3>
+        <p>
+            O elemento <code class="language-html">&lt;p&gt;</code> é utilizado para definir o início de um novo parágrafo, deixando uma linha
+em branco entre este e o texto anterior. Caso seja necessário forçar uma quebra de linha entre duas
+palavras contidas em um parágrafo, podemos utilizar o elemento &lt;br&gt;.
+
+        </p>
+
+        <h3>Marcadores de Estilo</h3>
+		<p>É possível criar efeitos no texto, alterando a forma e o tamanho
+da fonte. Todas as tags deste tipo devem abertas e fechadas, marcando o início e o fim do texto a
+ser formatado:</p>
+        <ul>
+            <li>Negrito: <code class="language-html">&lt;b&gt;</code></li>
+            <li>Itálico: <code class="language-html">&lt;i&gt;</code></li>
+            <li>Sublinhado: <code class="language-html">&lt;u&gt;</code></li>
+            <li>Subscrito: <code class="language-html">&lt;sub&gt;</code></li>
+            <li>Sobrescrito: <code class="language-html">&lt;sup&gt;</code></li>
+        </ul>
+    </section>
+	
+	
+	<section class="exercicios">
+        <h2>Exercícios</h2>
+		
+		<h3>Portal de uma empresa de tecnologia</h3>
+        <p>Você foi contratado para criar a estrutura inicial de um site institucional de uma
+empresa fictícia de tecnologia.</p>
+		<p>Crie um arquivo chamado: <b>index.html</b></p>
+		<p>Requisitos obrigatórios – o documento deve conter:</p>
+		<ul>
+            <li>Estrutura básica completa.</li>
+            <li>Cabeçalho da página, com um título principal com o nome da empresa e uma descrição
+breve da empresa.</li>
+            <li>Seção “Sobre nós” com dois parágrafos explicando a empresa. Dentro de um dos
+parágrafos, destaque palavras importantes utilizando negrito e itálico.</li>
+            <li>Seção “Serviços” com uma lista de serviços prestados.</li>
+            <li>Seção “Contato” com e-mail e telefone.</li>
+			<li>Rodapé com o nome da empresa, ano atual e o texto “Todos os direitos reservados”.</li>
+        </ul>
+		<p>Regras:</p>
+		<ul>
+            <li>Utilize comentários para separar as seções do código</li>
+            <li>Organize corretamente a hierarquia dos títulos</li>
+            <li>Não use CSS neste momento</li>
+            <li>Não use atributos neste momento</li>
+            <li>O código deve estar identado corretamente</li>
+        </ul>
+		<p>Desafios:</p>
+		<ul>
+            <li>Usar a tag <code class="language-html">&lt;section&gt;</code> para separar seções de conteúdo</li>
+            <li>Usar a tag <code class="language-html">&lt;header&gt;</code> para criar um cabeçalho</li>
+            <li>Usar a tag <code class="language-html">&lt;footer&gt;</code> para criar um rodapé</li>
+            <li>Inserir uma imagem da empresa na seção “Sobre Nós” com a tag <code class="language-html">&lt;img&gt;</code></li>
+        </ul>
+		
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        © 2026 - Prof. Me. William Tenório
+    </div>
+</footer>
+
+</body>
+</html>
