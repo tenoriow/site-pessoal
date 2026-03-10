@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Parte 2 - Semântica e Navegação em HTML</title>
+	<link rel="stylesheet" href="../../css/style.css">
+	<link type="image/png" sizes="32x32" rel="icon" href="../../css/icons8-professor-32.png">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
+		rel="stylesheet" />
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+</head>
+
+<body class="aula-page">
+
+	<header class="header">
+		<div class="container">
+			<h1>Parte 2 - Semântica em HTML</h1>
+			<p class="subtitle"><b>Programação/Desenvolvimeto Web Responsivo</b> • Prof. Me. William Tenório</p>
+
+		</div>
+	</header>
+
+	<main class="container content aula">
+
+		<section>
+			<h2>Semântica e Navegação em HTML</h2>
+
+			<p>
+				Atualmente o papel do HTML não é apenas “organizar visualmente” o documento, mas também
+				descrever o significado do conteúdo por meio de tags semânticas, tornando-o mais claro tanto
+				para programadores, quanto para browsers e outras engines que processam essa informação.
+			</p>
+
+			<div class="box warning">
+				A maior parte dos elementos possui um propósito bem definido: é fundamental respeitar o propósito de
+				cada elemento e utilizá-lo nas condições corretas.
+			</div>
+
+<pre class="line-numbers"><code class="language-html">&lt;h1&gt;Título Principal&lt;/h1&gt;
+&lt;p style="font-size: 32px; font-weight: bold;"&gt;Título Principal&lt;/p&gt;
+</code></pre>
+
+			<p>
+				No exemplo, a tag h1 não serve apenas para deixar o texto grande. Ela significa:
+				“Este é o título principal da página”. Visualmente, a segunda opção pode parecer igual,
+				mas semanticamente está incorreta.
+			</p>
+
+			<p>
+				Com boa semântica temos:
+			</p>
+
+			<ul>
+				<li>Acessibilidade - Leitores de tela entendem melhor a estrutura da página e melhoram a navegação.</li>
+				<li>SEO (Google) - Motores de busca usam a semântica para entender qual é o assunto principal, o que é
+					título e o que é seção.</li>
+				<li>Organização e Manutenção - Código semântico é mais legível, organizado e fácil de manter.</li>
+			</ul>
+
+			<p>
+				A tag <code class="language-html">&lt;header&gt;</code> representa o cabeçalho de um documento e
+				<code class="language-html">&lt;footer&gt;</code> representa o rodapé.
+			</p>
+
+			<p>
+				<code class="language-html">&lt;section&gt;</code> representa uma seção dentro de um documento e
+				geralmente contém
+				um título, <b>sendo utilizada quando não existe um elemento semântico mais específico</b>.
+			</p>
+
+			<p>
+				<code class="language-html">&lt;nav&gt;</code> é utilizado quando precisamos representar um agrupamento
+				de links de
+				navegação. Normalmente esses links são estruturados utilizando
+				<code class="language-html">&lt;ul&gt;</code>, <code class="language-html">&lt;li&gt;</code> e <code
+					class="language-html">&lt;a&gt;</code>.
+			</p>
+
+			<p>
+				<code class="language-html">&lt;main&gt;</code> especifica o conteúdo principal e de maior relevância da
+				página.
+			</p>
+
+		</section>
+
+		<section>
+
+			<h2>Links HTML</h2>
+
+			<p>Os hiperlinks são uma das inovações mais interessantes que a Web oferece. Bem, eles são uma
+				característica da Web desde o início, mas são o que torna a Web como ela é — eles nos permitem vincular
+				nossos documentos a qualquer outro documento (ou outro recurso) que queremos. Também podemos vincular
+				para partes específicas de documentos e podemos disponibilizar aplicativos em um endereço web simples
+				(em contraste com aplicativos nativos, que devem ser instalados e tantas outras coisas). Qualquer
+				conteúdo da web pode ser convertido em um link, para que, quando clicado (ou ativado de outra forma)
+				fará com que o navegador vá para outro endereço (URL).</p>
+
+			<div class="box info">
+				Nota: Um URL pode apontar para arquivos HTML, arquivos de texto, imagens, documentos de texto, arquivos
+				de vídeo e áudio e qualquer outra coisa que possa estar na Web. Se o navegador não souber exibir ou
+				manipular o arquivo, ele perguntará se você deseja abrir o arquivo (nesse caso, o dever de abrir ou
+				manipular o arquivo é passado para um aplicativo nativo adequado no dispositivo) ou fazer o download
+				dele (nesse caso, você pode tentar lidar com isso mais tarde).
+			</div>
+
+			<figure>
+				<img src="img/home-bbc.png" alt="Página inicial BBC">
+				<figcaption>Figura 1 – Página inicial do site da BBC com destaque para os links.</figcaption>
+			</figure>
+
+			<p>A página inicial da BBC, por exemplo, contém um grande número de links que apontam não apenas para várias
+				notícias, mas também diferentes áreas do site (funcionalidade de navegação), páginas de login/registro
+				(ferramentas do usuário) e muito mais.</p>
+
+			<h3>Como fazer um link em HTML</h3>
+
+			<p>No HTML, os links são definidos pela tag <code class="language-html">&lt;a&gt;</code>. Dentro dessa tag
+				incluímos o atributo href (Hypertext Reference), que é o endereço de destino do link. Dentro do conteúdo
+				da tag <code class="language-html">&lt;a&gt;</code>, incluímos então o texto ou elemento que servirá
+				como redirecionador, ou seja, que ao ser clicado, executará a função de redirecionar para o endereço
+				dentro do atributo href.<br><br>Dessa forma, a sintaxe básica do HTML link é:</p>
+
+			<pre class="line-numbers"><code class="language-html">&lt;a href="url"&gt;Clique aqui&lt;/a&gt;</code></pre>
+
+			<p>A tag <code class="language-html">&lt;a&gt;</code> pode ser utilizada dentro ou fora dos demais elementos
+				(tags) do HTML, como no exemplo abaixo onde criamos um parágrafo, e dentro dele, apenas a palavra Google
+				contém um hiperlink para a página inicial do Google:</p>
+
+			<pre class="line-numbers"><code class="language-html">&lt;p&gt;Link para o site do
+&lt;a href="https://google.com"&gt;Google&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+
+			<p>Como resultado temos:<br>Link para o site do <a href="https://google.com">Google</a>.</p>
+
+			<h3>O atributo href</h3>
+
+			<p>O atributo <code class="language-html">href</code> é utilizado para especificar o endereço de destino do
+				link. Um link pode direcionar para:</p>
+
+			<ul>
+				<li>Um endereço completo, como <code class="language-html">https://google.com</code>,
+					utilizados para páginas de outros domínios, ou seja, externas.</li>
+				<li>Um caminho relativo, como <code class="language-html">/contato.html</code>, que aponta para um
+					arquivo dentro do mesmo site.</li>
+				<li>Um elemento interno, como <code class="language-html">#secao-principal</code>, que aponta para um
+					elemento HTML existente na mesma página.</li>
+			</ul>
+
+			<h3>O atributo target</h3>
+
+			<p>O atributo <code class="language-html">target</code> é utilizado para especificar onde o link será
+				aberto. Os valores mais comuns são:</p>
+
+			<ul>
+				<li><code class="language-html">_self</code>: O link será aberto na mesma aba.</li>
+				<li><code class="language-html">_blank</code>: O link será aberto em uma nova aba.</li>
+			</ul>
+
+			<pre class="line-numbers"><code class="language-html">&lt;a href="https://google.com" target="_blank"&gt;Link para o site do Google&lt;/a&gt;
+</code></pre>
+
+
+			<h3>URLs e Caminhos em HTML</h3>
+
+			<p>
+				Na web, cada recurso possui um endereço chamado URL (Uniform Resource Locator).
+				Uma URL indica onde um recurso está localizado, podendo apontar para páginas HTML,
+				imagens, arquivos ou qualquer outro conteúdo disponível na internet.
+			</p>
+
+			<p>
+				Ao criar links ou carregar arquivos em um site, utilizamos esses endereços dentro
+				de atributos como <code class="language-html">href</code> (em links) ou <code
+					class="language-html">src</code> (em imagens, scripts e outros
+				recursos).
+			</p>
+
+			<pre class="line-numbers"><code class="language-html">&lt;a href="https://www.google.com"&gt;Ir para o Google&lt;/a&gt;
+</code></pre>
+
+			<p>
+				Nesse exemplo, o atributo <code class="language-html">href</code> contém a URL que indica para onde o
+				navegador
+				deve ir quando o usuário clicar no link.
+			</p>
+
+			<h3>Estrutura de uma URL</h3>
+
+			<p>
+				Uma URL completa geralmente possui alguns componentes principais:
+			</p>
+
+			<ul>
+				<li><b>Protocolo</b> – define como o recurso será acessado (ex: http ou https)</li>
+				<li><b>Domínio</b> – o endereço do servidor que hospeda o site</li>
+				<li><b>Caminho</b> – indica a localização específica do recurso dentro do site</li>
+			</ul>
+
+			<pre class="line-numbers"><code class="language-html">https://www.exemplo.com/paginas/sobre.html
+</code></pre>
+
+			<p>
+				Nesse exemplo:
+			</p>
+
+			<ul>
+				<li><b>https</b> é o protocolo</li>
+				<li><b>www.exemplo.com</b> é o domínio</li>
+				<li><b>/paginas/sobre.html</b> é o caminho para o arquivo dentro do site</li>
+			</ul>
+
+			<h3>URLs Absolutas</h3>
+
+			<p>
+				Uma URL absoluta contém o endereço completo do recurso, incluindo protocolo e domínio.
+				Ela é usada principalmente quando queremos acessar um recurso externo ou um site diferente.
+			</p>
+
+			<pre class="line-numbers"><code class="language-html">&lt;a href="https://www.wikipedia.org"&gt;Acessar Wikipedia&lt;/a&gt;
+</code></pre>
+
+			<p>
+				Nesse caso, o navegador sabe exatamente onde encontrar o recurso, pois o endereço
+				completo foi especificado.
+			</p>
+
+			<h3>URLs Relativas</h3>
+
+			<p>
+				Uma URL relativa indica o caminho do recurso em relação ao arquivo atual.
+				Ela é muito utilizada em projetos web, pois permite referenciar arquivos
+				dentro do próprio site sem precisar repetir todo o endereço.
+			</p>
+
+			<p>
+				Exemplo de estrutura de projeto:
+			</p>
+
+			<pre class="line-numbers"><code class="language-html">/site
+   index.html
+   /paginas
+       sobre.html
+   /imagens
+       logo.png
+	fundo.jpg
+</code></pre>
+
+			<p>
+				Se estivermos no arquivo <code class="language-html">index.html</code>, podemos acessar a página
+				<code class="language-html">sobre.html</code> com o seguinte link:
+			</p>
+
+			<pre class="line-numbers"><code class="language-html">&lt;a href="paginas/sobre.html"&gt;Página Sobre&lt;/a&gt;
+</code></pre>
+
+			<p>
+				E podemos carregar uma imagem da pasta imagens assim:
+			</p>
+
+			<pre class="line-numbers"><code class="language-html">&lt;img src="imagens/logo.png" alt="Logo do site"&gt;
+</code></pre>
+
+			<h3>Por que usar caminhos relativos?</h3>
+
+			<ul>
+				<li>Facilitam a organização do projeto</li>
+				<li>Evita repetir o domínio em todos os links</li>
+				<li>Permitem mover o site para outro domínio sem quebrar os links internos</li>
+				<li>Tornam o código mais limpo e fácil de manter</li>
+			</ul>
+
+			<p>
+				Por esse motivo, em projetos web é comum utilizar URLs absolutas apenas para recursos
+				externos e URLs relativas para recursos internos do próprio site.
+			</p>
+
+			<h3>Âncoras em HTML</h3>
+
+			<p>
+				Uma âncora permite criar um link que leva o usuário para uma posição específica
+				dentro da mesma página. Isso é muito útil em páginas longas, como documentações,
+				artigos ou páginas com sumário.
+			</p>
+
+			<p>
+				Para criar uma âncora, utilizamos o elemento <code class="language-html">&lt;a&gt;</code> com o atributo
+				<code class="language-html">href</code> apontando para um identificador (<code class="language-html">id</code>) presente na página.
+			</p>
+
+			<h3>Exemplo de uso</h3>
+
+			<p>
+				Primeiro criamos um link que aponta para uma seção da página:
+			</p>
+
+			<pre class="line-numbers"><code class="language-html">&lt;a href="#contato"&gt;Ir para a seção de contato&lt;/a&gt;
+</code></pre>
+
+			<p>
+				Depois criamos um elemento com o atributo <code class="language-html">id</code> correspondente:
+			</p>
+
+			<pre class="line-numbers"><code class="language-html">&lt;h2 id="contato"&gt;Seção de Contato&lt;/h2&gt;
+&lt;p&gt;Aqui estão as informações de contato.&lt;/p&gt;
+</code></pre>
+
+			<p>
+				Quando o usuário clicar no link, o navegador irá rolar a página automaticamente
+				até o elemento que possui o <code class="language-html">id</code> indicado.
+			</p>
+
+			
+
+
+		</section>
+
+		<section>
+
+			<h2>Outros Elementos Importantes</h2>
+
+			<h3>Listas de Itens</h3>
+
+			<p>
+				Listas HTML organizam conteúdos utilizando tags estruturais. A tag
+				<code class="language-html">&lt;ul&gt;</code> cria listas não ordenadas e <code
+					class="language-html">&lt;ol&gt;</code>
+				cria listas ordenadas (com números ou letras). Cada item dentro dessas listas
+				é definido pela tag <code class="language-html">&lt;li&gt;</code>.
+			</p>
+
+			<p>
+				Essas estruturas são muito utilizadas em menus de navegação, tutoriais e organização
+				de informações.
+			</p>
+
+			<p>Lista não ordenada:</p>
+
+<pre class="line-numbers"><code class="language-html">&lt;ul&gt;
+	&lt;li&gt;Item 1&lt;/li&gt;
+	&lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+			<p>Lista ordenada:</p>
+
+<pre class="line-numbers"><code class="language-html">&lt;ol&gt;
+	&lt;li&gt;Primeiro passo&lt;/li&gt;
+	&lt;li&gt;Segundo passo&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+			<p>
+				Também é possível colocar uma lista dentro de outra, criando listas aninhadas.
+			</p>
+
+			<h3>Imagens</h3>
+
+			<p>
+				Podemos adicionar imagens em uma página utilizando o elemento <code
+					class="language-html">&lt;img&gt;</code>.
+				O atributo <code class="language-html">src</code> indica o caminho da imagem e o atributo <code
+					class="language-html">alt</code>
+				define um texto alternativo que descreve a imagem.
+			</p>
+
+			<p>
+				O elemento <code class="language-html">&lt;figure&gt;</code> é uma marcação semântica utilizada para
+				agrupar
+				uma imagem e sua legenda.
+			</p>
+
+<pre class="line-numbers"><code class="language-html">&lt;figure&gt;
+	&lt;img src="elephant.jpg" alt="Um elefante na selva" /&gt;
+	&lt;figcaption&gt;Um elefante na selva&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+
+		</section>
+
+
+
+		<section class="exercicios">
+			<h2>Exercícios</h2>
+
+			<h3>Exercício 1 - Semântica: Qual elemento usar?</h3>
+
+			<p>Para cada situação abaixo, indique qual elemento HTML semântico é mais adequado.<br>
+			a) O topo do site com o nome da empresa e o logotipo.<br>
+			b) Um conjunto de links para navegar entre as páginas do site.<br>
+			c) O conteúdo principal da página, como um artigo ou notícia.<br>
+			d) Uma área no final da página com direitos autorais e informações legais.<br>
+			e) Um bloco de conteúdo que possui título e conteúdo próprio dentro da página.
+			</p>
+			<p><b>Responda: </b>Visualmente, a utilização desses elementos mudou algo na página? Por que é importante utilizá-los?</p>
+
+			<h3>Exercício 2 - Pensando na Semântica</h3>
+
+			<p>Explique por que usar <code class="language-html">&lt;h1&gt;</code> para títulos é melhor do que apenas aumentar o tamanho da fonte com CSS. Dica: pense em: acessibilidade, SEO e estrutura do documento.</p>
+
+			<h3>Exercício 3 - Header ou Section?</h3>
+
+			<p>Um dos objetivos dos elementos semânticos é separar os conteúdos similares, de um mesmo objetivo, dentro de grupos. Fazemos isso, por exemplo, para agrupar logotipo, nome do site e menu principal que ficam no cabeçalho da página, usando o elemento <code class="language-html">&lt;header&gt;</code>.</p>
+			<p>O elemento <code class="language-html">&lt;section&gt;</code> também é utilizado para separar seções de conteúdo dentro da página. Explique por que não devemos usá-lo para agrupar elementos do cabeçalho e rodapé.</p>
+
+			<h3>Exercício 4 - Verdadeiro ou False</h3>
+
+			<p>Analise as afirmações e indique se não verdadeiras ou falsas:</p>
+			<p>	<code class="language-html">&lt;header&gt;</code> só pode aparecer uma vez na página.<br>
+			<code class="language-html">&lt;section&gt;</code> geralmente possui um título.<br>
+			<code class="language-html">&lt;nav&gt;</code> deve ser usado para qualquer conjunto de links.<br>
+			<code class="language-html">&lt;main&gt;</code> representa o conteúdo principal da página.</p>
+
+			<h3>Exercício 5 - Listas</h3>
+
+			<p>Crie uma página com o título "Linguagens de Programação" e adicione uma lista não ordenada com as linguagens de programação que você conhece. Em seguida, adicione uma lista ordenada com os passos para aprender programação.</p>
+
+			<p><b>Desafio</b>: Faça um aninhamento de listas (uma lista dentro da outra). Exemplo:</p>
+			<ul>
+				<li>Item 1 da lista</li>
+				<li>Item 2 da lista</li>
+				<li>Item 3 da lista
+					<ul>
+						<li>Subitem 1 do Item 3</li>
+						<li>Subitem 2 do Item 3</li>
+					</ul>
+				</li>
+				<li>Item 4 da lista</li>
+			</ul>
+
+			<h3>Exercício 6 - Imagens</h3>
+
+			<p>Crie uma página contendo duas imagens:<br>
+			Uma imagem hospedada na web (fonte externa);<br>
+			Uma imagem salva localmente em sua máquina.</p>
+
+			<h3>Exercício 7 - Links</h3>
+
+			<p>Crie uma página contendo um link para a página inicial da UNIP: "Clique aqui para abrir o site da UNIP". Somente a palavra UNIP deve conter o link.<br>
+			Em outro link, direcione o usuário para a página do Curso de Ciência da Computação da UNIP. A página deve ser carregada em outra aba.
+			</p>
+
+			<p><b>Desafio</b> Insira uma imagem qualquer na página e a transforme em um link para um portal qualquer de tecnologia. Ao clicar na imagem, direcionar o usuário para o destino do link.</p>
+
+			<h3>Exercício 8 - Menu de Navegação</h3>
+
+			<p>Crie um menu simples <b>utilizando lista</b>.</p>
+
+			<p>Itens do menu:</p>
+			<ul>
+				<li>Início</li>
+				<li>Sobre</li>
+				<li>Serviços</li>
+				<li>Contato</li>
+			</ul>
+
+			<p><b>Cada item deve ser um link usando <code class="language-html">&lt;a&gt;</code>.</b></p>
+
+
+			<h3>Exercício 9 - Portal de uma empresa de tecnologia - Parte II</h3>
+
+			<p>Iremos trabalhar no exercício básica da aula anterior. Use o código feito por você ou utilize o exemplo abaixo.</p>
+
+			<pre class="line-numbers"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;TechFuture Soluções Digitais&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Cabeçalho --&gt;
+    &lt;h1&gt;TechFuture Soluções Digitais&lt;/h1&gt;
+    &lt;p&gt;Transformando ideias em &lt;b&gt;soluções digitais&lt;/b&gt; modernas e eficientes.&lt;/p&gt;
+
+    &lt;!-- Seção Sobre Nós --&gt;
+    &lt;h2&gt;Sobre Nós&lt;/h2&gt;
+    &lt;p&gt;
+        A TechFuture atua no mercado de tecnologia desenvolvendo sistemas sob medida para empresas de todos os portes.
+    &lt;/p&gt;
+    &lt;p&gt;
+        Nosso compromisso é com a &lt;b&gt;qualidade&lt;/b&gt; e a &lt;i&gt;inovação&lt;/i&gt;, entregando soluções que realmente fazem a diferença.
+    &lt;/p&gt;
+
+    &lt;!-- Seção Serviços --&gt;
+    &lt;h2&gt;Serviços&lt;/h2&gt;
+	&lt;p&gt;Desenvolvimento Web&lt;/p&gt;
+	&lt;p&gt;Aplicativos Mobile&lt;/p&gt;
+	&lt;p&gt;Consultoria em Tecnologia&lt;/p&gt;
+
+    &lt;!-- Seção Contato --&gt;
+    &lt;h2&gt;Contato&lt;/h2&gt;
+    &lt;p&gt;Email: contato@techfuture.com&lt;/p&gt;
+    &lt;p&gt;Telefone: (11) 99999-9999&lt;/p&gt;
+    &lt;hr&gt;
+
+    &lt;!-- Rodapé --&gt;
+    &lt;p&gt;&amp;copy; 2026 TechFuture Soluções Digitais. Todos os direitos reservados.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+			<p>Requisitos obrigatórios:</p>
+			<ul>
+				<li>Estruturação semântica:
+					<ul>
+						<li>Usar a tag <code class="language-html">&lt;section&gt;</code> para separar seções de conteúdo</li>
+						<li>Usar a tag <code class="language-html">&lt;header&gt;</code> para separar elementos do cabeçalho</li>
+						<li>Usar a tag <code class="language-html">&lt;footer&gt;</code> para separar elementos do rodapé</li>						
+					</ul>
+				</li>
+				<li>Substituir a lista de serviços, feitas com parágrafos, pelo elemento adequado de listas.</li>
+				<li>Inserir uma imagem da empresa na seção “Sobre Nós” com a tag <code class="language-html">&lt;img&gt;</code>.</li>
+				<li>Criar um menu de navegação, usando lista não ordenada. O menu deve:
+					<ul>
+						<li>Conter links do tipo âncora para cada uma das seções "Sobre Nós", "Serviços" e "Contato"</li>
+						<li>Conter link externo para alguma página de tecnologia</li>
+						<li>Usar a tag <code class="language-html">&lt;nav&gt;</code></li>						
+					</ul>
+				</li>
+				<li><b>Desafio: </b> Ao final da página, adicione um link "Voltar ao topo" que, ao ser clica, volta ao início da página. </li>
+			</ul>
+
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			© 2026 - Prof. Me. William Tenório
+		</div>
+	</footer>
+
+</body>
+
+</html>
